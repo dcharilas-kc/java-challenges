@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import static java.util.Objects.isNull;
 
@@ -9,7 +11,7 @@ public class BirdMountain {
 
     private static int height = 1;
     private static char[][] mountain;
-    private static int remainingMountains;
+    private static long remainingMountains;
 
     public int peakHeight(char[][] input) {
         mountain = input;
@@ -62,16 +64,16 @@ public class BirdMountain {
         return x > 0 && x < mountain.length && y > 0 && y < mountain[0].length;
     }
 
-    private int countMountains() {
-        int count = 0;
-        for (int i = 0; i < mountain.length; i++) {
-            for (int j = 0; j < mountain[0].length; j++) {
-                if (isActiveMountain(i,j)) {
-                    count++;
-                }
-            }
-        }
-        return count;
+    private long countMountains() {
+        return Stream.of(mountain)
+                .flatMapToInt(cells -> IntStream.range(0, cells.length).filter(i -> cells[i] == '^'))
+                .count();
+    }
+
+    /** used for testing  */
+    public long countMountains(char[][] input) {
+        mountain = input;
+        return countMountains();
     }
 
 
