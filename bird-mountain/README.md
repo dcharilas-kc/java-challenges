@@ -10,7 +10,7 @@ _Height = 3_
 
 Write a Java program that implements the above logic and calculates the height for any input.
 
-Guidelines:
+**Guidelines**:
 - Put all code in _BirdMountain_ class so that it can be verified at the source site.
 
 
@@ -35,5 +35,5 @@ Notes:
 
 Write a Java program that counts how many dry landing spots there are for the next 3 days only (include day 0)
 
-Guidelines:
+**Guidelines**:
 - Put all code in BirdMountainRiver class so that it can be verified at the source site.  
