@@ -36,8 +36,7 @@ public class BirdMountainRiverTest {
                 "^^^^^^^^     ^     ^ ".toCharArray(),
                 "^^^^^        ^^^^^^^ ".toCharArray()
         };
-        //TODO configure assert - only 1st element is known
-        //assertArrayEquals(new int[]{189,0,0,0}, BirdMountainRiver.dryGround(terrain));
+        assertArrayEquals(new int[]{189,189,189,189}, BirdMountainRiver.dryGround(terrain));
     }
 
     @Test
@@ -51,8 +50,7 @@ public class BirdMountainRiverTest {
                 "          ".toCharArray(),
                 "          ".toCharArray()
         };
-        //TODO configure assert - only 1st element is known
-        //assertArrayEquals(new int[]{60,0,0,0}, BirdMountainRiver.dryGround(terrain));
+        assertArrayEquals(new int[]{60,0,0,0}, BirdMountainRiver.dryGround(terrain));
     }
 
     @Test
@@ -71,8 +69,7 @@ public class BirdMountainRiverTest {
                 "    ^^^^^^^^^^^^^    ".toCharArray(),
                 "      ^^^^^^^^^      ".toCharArray()
         };
-        //TODO configure assert - only 1st element is known
-        //assertArrayEquals(new int[]{231,0,0,0}, BirdMountainRiver.dryGround(terrain));
+        assertArrayEquals(new int[]{231,205,135,30}, BirdMountainRiver.dryGround(terrain));
     }
 
     @Test
@@ -94,8 +91,7 @@ public class BirdMountainRiverTest {
                 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^".toCharArray(),
                 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^".toCharArray()
         };
-        //TODO configure assert - only 1st element is known
-        //assertArrayEquals(new int[]{231,0,0,0}, BirdMountainRiver.dryGround(terrain));
+        assertArrayEquals(new int[]{382,382,260,150}, BirdMountainRiver.dryGround(terrain));
     }
 }
 
