@@ -24,8 +24,8 @@ others with focus on specific Java aspects.
 | 3   |            | Stone Game                | Algorithm       |
 | 4   |            | Puzzlers - Part 1         | Predict Outcome |
 | 5   |            | Fun with Strings - Part 1 | Algorithm       |
-| 6   |            | Puzzlers - Part 2         | Predict Outcome |
-| 7   |            |                           |                 |
+| 6   |            | Cockroach Bug Scatter     | Algorithm       |
+| 7   |            | Puzzlers - Part 2         | Predict Outcome |
 |     |            |                           |                 |
 |     |            |                           |                 |
 |     |            |                           |                 |
