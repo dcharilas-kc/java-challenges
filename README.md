@@ -17,17 +17,17 @@ others with focus on specific Java aspects.
 
 **Calendar:**
 
-| #   | Date       | Challenge              | Type            |
-|-----|------------|------------------------|-----------------|
-| 1   | 18/06/2022 | Bird Mountain - Part 1 | Algorithm       |
-| 2   | 04/07/2022 | Bird Mountain - Part 2 | Algorithm       |
-| 3   |            | Stone Game             | Algorithm       |
-| 4   |            | Puzzlers - Part 1      | Predict Outcome |
-| 5   |            |                        |                 |
-| 6   |            | Puzzlers - Part 2      | Predict Outcome |
-|     |            |                        |                 |
-|     |            |                        |                 |
-|     |            |                        |                 |
-|     |            |                        |                 |
+| #   | Date       | Challenge                 | Type            |
+|-----|------------|---------------------------|-----------------|
+| 1   | 18/06/2022 | Bird Mountain - Part 1    | Algorithm       |
+| 2   | 04/07/2022 | Bird Mountain - Part 2    | Algorithm       |
+| 3   |            | Stone Game                | Algorithm       |
+| 4   |            | Puzzlers - Part 1         | Predict Outcome |
+| 5   |            | Fun with Strings - Part 1 | Algorithm       |
+| 6   |            | Puzzlers - Part 2         | Predict Outcome |
+| 7   |            |                           |                 |
+|     |            |                           |                 |
+|     |            |                           |                 |
+|     |            |                           |                 |
 
 
