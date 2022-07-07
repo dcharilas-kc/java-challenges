@@ -16,17 +16,23 @@ others with focus on specific Java aspects.
 
 **Calendar:**
 
-| #   | Date       | Challenge                 | Type            |
-|-----|------------|---------------------------|-----------------|
-| 1   | 18/06/2022 | Bird Mountain - Part 1    | Algorithm       |
-| 2   | 04/07/2022 | Bird Mountain - Part 2    | Algorithm       |
-| 3   |            | Stone Game                | Algorithm       |
-| 4   |            | Puzzlers - Part 1         | Predict Outcome |
-| 5   |            | Fun with Strings - Part 1 | Algorithm       |
-| 6   |            | Cockroach Bug Scatter     | Algorithm       |
-| 7   |            | Puzzlers - Part 2         | Predict Outcome |
-|     |            |                           |                 |
-|     |            |                           |                 |
-|     |            |                           |                 |
+| #   | Date       | Challenge                   | Type            |
+|-----|------------|-----------------------------|-----------------|
+| 1   | 18/06/2022 | Bird Mountain - Part 1      | Algorithm       |
+| 2   | 04/07/2022 | Bird Mountain - Part 2      | Algorithm       |
+| 3   |            |                             |                 |
+| 4   |            |                             |                 |
+| 5   |            |                             |                 |
+| 6   |            |                             |                 |
 
+**Available Challenges:**
 
+| Challenge                   | Type            |
+|-----------------------------|-----------------|
+| Stone Game                  | Algorithm       |
+| Puzzlers - Part 1           | Predict Outcome |
+| Fun with Strings - Part 1   | Algorithm       |
+| Cockroach Bug Scatter       | Algorithm       |
+| Puzzlers - Part 2           | Predict Outcome |
+| Buy and Sell Stock - Part 1 | Algorithm       |
+ | Buy and Sell Stock - Part 2 | Algorithm       |
