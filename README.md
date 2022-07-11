@@ -36,4 +36,4 @@ others with focus on specific Java aspects.
 | Puzzlers - Part 2           | Predict Outcome |
 | Buy and Sell Stock - Part 1 | Algorithm       |
 | Buy and Sell Stock - Part 2 | Algorithm       |
-| Binary Tree Camera          | Algorithm  s    |
+| Binary Tree Camera          | Algorithm       |
