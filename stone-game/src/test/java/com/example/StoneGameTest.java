@@ -2,7 +2,7 @@ package com.example;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class StoneGameTest {
 
@@ -10,17 +10,22 @@ public class StoneGameTest {
 
     @Test
     public void test1() {
-        assertEquals(true, stoneGame.stoneGame(new int[]{5,3,4,5}));
+        assertTrue(stoneGame.stoneGame(new int[]{5, 3, 4, 5}));
     }
 
     @Test
     public void test2() {
-        assertEquals(true, stoneGame.stoneGame(new int[]{3,7,2,3}));
+        assertTrue(stoneGame.stoneGame(new int[]{3, 7, 2, 3}));
+    }
+
+    @Test
+    public void testBobWins() {
+        assertFalse(stoneGame.stoneGame(new int[]{1, 5, 1}));
     }
 
     @Test
     public void test_biglist() {
-        assertEquals(true, stoneGame.stoneGame(new int[]{5,17,19,1,15,19,11,9,6,5,11,7,12,12,2,14,3,6,18,3}));
+        assertTrue(stoneGame.stoneGame(new int[]{5, 17, 19, 1, 15, 19, 11, 9, 6, 5, 11, 7, 12, 12, 2, 14, 3, 6, 18, 3}));
     }
 
 }
