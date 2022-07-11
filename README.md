@@ -35,4 +35,5 @@ others with focus on specific Java aspects.
 | Cockroach Bug Scatter       | Algorithm       |
 | Puzzlers - Part 2           | Predict Outcome |
 | Buy and Sell Stock - Part 1 | Algorithm       |
- | Buy and Sell Stock - Part 2 | Algorithm       |
+| Buy and Sell Stock - Part 2 | Algorithm       |
+| Binary Tree Camera          | Algorithm       |
