@@ -1,4 +1,4 @@
-## Stone Game
+## Binary Tree Cameras
 
 Challenge is available at: https://leetcode.com/problems/binary-tree-cameras/
 
