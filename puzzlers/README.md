@@ -17,3 +17,10 @@ We give you the code - try and guess what it will do before running it!
 - MoreNames
 - PingPong
 - Twisted
+
+## Part 3 - there is an error, you just need to find it  
+- RuntimeErrorExample
+- ArrayCounter
+- LineSegment
+- ForLoopError
+- Fahrenheit
