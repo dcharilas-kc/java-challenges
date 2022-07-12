@@ -64,4 +64,40 @@ public class CockroachScatterTest {
         final int[] expected = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         assertArrayEquals(expected, CockroachScatter.cockroaches(room));
     }
+
+    @Test
+    public void test_circletheroom() {
+        char[][] room = {
+                "+--------89---+".toCharArray(),
+                "|             |".toCharArray(),
+                "|       U     |".toCharArray(),
+                "|             |".toCharArray(),
+                "|             |".toCharArray(),
+                "|             |".toCharArray(),
+                "|             |".toCharArray(),
+                "|             |".toCharArray(),
+                "+-------------+".toCharArray()
+        };
+        final int[] expected = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 1};
+        assertArrayEquals(expected, CockroachScatter.cockroaches(room));
+    }
+
+    @Test
+    public void test_fullroom() {
+        char[][] room = {
+                "+-------89---+".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "|UUUUUUULLLLL|".toCharArray(),
+                "+------------+".toCharArray()
+        };
+        final int[] expected = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 108};
+        assertArrayEquals(expected, CockroachScatter.cockroaches(room));
+    }
 }
