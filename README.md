@@ -27,13 +27,14 @@ others with focus on specific Java aspects.
 
 **Available Challenges:**
 
-| Challenge                   | Type            |
-|-----------------------------|-----------------|
-| Stone Game                  | Algorithm       |
-| Puzzlers - Part 1           | Predict Outcome |
-| Fun with Strings - Part 1   | Algorithm       |
-| Cockroach Bug Scatter       | Algorithm       |
-| Puzzlers - Part 2           | Predict Outcome |
-| Buy and Sell Stock - Part 1 | Algorithm       |
-| Buy and Sell Stock - Part 2 | Algorithm       |
-| Binary Tree Camera          | Algorithm       |
+| Challenge                   | Type               |
+|-----------------------------|--------------------|
+| Stone Game                  | Algorithm          |
+| Puzzlers - Part 1           | Predict the output |
+| Fun with Strings - Part 1   | Algorithm          |
+| Cockroach Bug Scatter       | Algorithm          |
+| Puzzlers - Part 2           | Predict the output |
+| Buy and Sell Stock - Part 1 | Algorithm          |
+| Buy and Sell Stock - Part 2 | Algorithm          |
+| Binary Tree Camera          | Algorithm          |
+| Puzzlers - Part 3           | Spot the error     | 
