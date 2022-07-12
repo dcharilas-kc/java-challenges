@@ -24,6 +24,11 @@ public class StoneGameTest {
     }
 
     @Test
+    public void testBobOddLengthButAliceWins() {
+        assertTrue(stoneGame.stoneGame(new int[]{1, 5, 5}));
+    }
+
+    @Test
     public void test_biglist() {
         assertTrue(stoneGame.stoneGame(new int[]{5, 17, 19, 1, 15, 19, 11, 9, 6, 5, 11, 7, 12, 12, 2, 14, 3, 6, 18, 3}));
     }

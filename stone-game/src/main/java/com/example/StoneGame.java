@@ -1,47 +1,51 @@
 package com.example;
 
+import java.util.Arrays;
+
 /**
- * An exhaustive search solution for the stones game.
+ * A solver for the <a href="https://leetcode.com/problems/stone-game/">stones game</a>.
  *
- * The original <a href="https://leetcode.com/problems/stone-game/">original description of this problem</a>
- * specifies that there are always an even number of piles at the start, but this solution will work for an
- * odd number of piles as well.  In fact, the only cases I could come up with where the second player can
- * win are when there are an odd number of piles!
+ * An efficient solution for a large number of piles requires dynamic programming, where
+ * we solve it first for sub-arrays of length 1, then length 2, etc., using the previous
+ * row to compute the next, until the whole array is solved.
  */
 public class StoneGame {
 
-    private int[] piles;
 
     public boolean stoneGame(int[] piles) {
-        this.piles = piles;
 
-        // This method call will return the actual best expected score for Alice, though the problem states that
-        // we only care whether Alice can always win, so we can just check to see that that value is positive.
-        return minimax(0, piles.length-1, 1, 0) > 0;
-    }
+        // Array where element (i, j) is the best score possible for the subarray of piles starting
+        // at pile i and extending to pile i+j.
+        int[][] bestSolution = new int[piles.length][piles.length];
 
-    /**
-     * A standard minimax algorithm to solve the stones game.  This returns the best possible score for the
-     * player whose turn it is; positive values mean Alice is winning while negative values mean Bob is winning.
-     * @param leftIndex     the index of the left pile
-     * @param rightIndex    the index of the right pile
-     * @param multiplier    either 1 or -1, depending on whether it is Alice's turn or not
-     * @param score         the running score
-     * @return              the best score possible for the player whose turn it is
-     */
-    private int minimax(int leftIndex, int rightIndex, int multiplier, int score) {
-        if (leftIndex == rightIndex) {
-            // There's one square left, so add it into the score and return it.
-            return score + piles[leftIndex] * multiplier;
+        // Fill in the first row (for subarrays of length 1) from the input data.
+        bestSolution[0] = Arrays.copyOf(piles, piles.length);
+
+        // The multiplier for adding in scores, that switches between 1 (benefiting Alice) and -1 (benefiting Bob).
+        int multiplier = -1;
+
+        // We've populated the first row already for length=1, so consider lengths from 2 on up.
+        for (int len=2; len<=piles.length; len++) {
+
+            // Consider each subarray starting position.
+            for (int i=0; i<piles.length-len+1; i++) {
+
+                // To compute the best for a subarray of length n, consider both the pile at the current
+                // position plus the best for n-1 to the right of it...
+                int left = multiplier * piles[i] + bestSolution[len-2][i + 1];
+                // ...and the best for n-1 at the current position, plus the pile to the right of it.
+                int right = bestSolution[len-2][i] + multiplier * piles[i+len-1];
+
+                // Consider whose turn it is when computing which of the two options is best; Alice is trying
+                // to maximise the score, while Bob is trying to minimise it.
+                bestSolution[len-1][i] = multiplier == 1 ? Math.max(left, right) : Math.min(left, right);
+            }
+
+            // Switch whose turn it is.
+            multiplier = -multiplier;
         }
 
-        // Otherwise, try both options (either the player chooses from the left pile or the right) and recurse.
-        int leftScore = minimax(leftIndex + 1, rightIndex, -multiplier, score + multiplier * piles[leftIndex]);
-        int rightScore = minimax(leftIndex, rightIndex - 1, -multiplier, score + multiplier * piles[rightIndex]);
-        if (multiplier == 1) {
-            return Math.max(leftScore, rightScore);
-        } else {
-            return Math.min(leftScore, rightScore);
-        }
+        // If it ends on Bob's turn, then a positive value is bad for Alice.
+        return multiplier == 1 ? bestSolution[piles.length-1][0] < 0 : bestSolution[piles.length-1][0] > 0;
     }
 }
