@@ -19,6 +19,6 @@ Return the minimum number of cameras needed to monitor all nodes of the tree.
 - Node.val == 0
 
 **Guidelines**:
-- Put all code in Camera class so that it can be verified at the source site. 
-- TreeNode class is provided, you do not need to include it in your code
-- It is mandatory to use TreeNode
+- Put all code in `Camera` class so that it can be verified at the source site. 
+- `TreeNode` class is provided, you do not need to include it in your code
+- Before testing `Camera` class, you need to call `BinaryTree` class in order to generate the TreeNode object.
