@@ -7,7 +7,13 @@ import java.util.Arrays;
  *
  * An efficient solution for a large number of piles requires dynamic programming, where
  * we solve it first for sub-arrays of length 1, then length 2, etc., using the previous
- * row to compute the next, until the whole array is solved.
+ * row to compute the next, until the whole array is solved.  It is also treated here as
+ * a minimax problem, where Alice is trying to achieve the highest positive score, while
+ * Bob is trying for the lowest negative score.
+ *
+ * @link https://en.wikipedia.org/wiki/Dynamic_programming#Computer_programming
+ * @link https://en.wikipedia.org/wiki/Overlapping_subproblems
+ * @link https://en.wikipedia.org/wiki/Minimax
  */
 public class StoneGame {
 
@@ -45,7 +51,9 @@ public class StoneGame {
             multiplier = -multiplier;
         }
 
-        // If it ends on Bob's turn, then a positive value is bad for Alice.
+        // The very last iteration of the loop computed the solution we want, for the entire array.  But we
+        // still need to consider whose turn it is.  If it ends on Bob's turn, then a positive value is bad
+        // for Alice, and vice versa.
         return multiplier == 1 ? bestSolution[piles.length-1][0] < 0 : bestSolution[piles.length-1][0] > 0;
     }
 }
