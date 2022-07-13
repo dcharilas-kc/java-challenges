@@ -1,26 +1,36 @@
 package com.example;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class BinaryTree {
 
-    public TreeNode formTree(Integer[] data) {
-        TreeNode root = new TreeNode(data[0]);
-        form(root, 0, data);
+    public static TreeNode formTree(Integer[] nums) {
+        Deque<TreeNode> queue = new ArrayDeque<>();
+
+        TreeNode root = new TreeNode(nums[0]);
+        queue.add(root);
+
+        int i = 1;
+        while (i < nums.length) {
+            TreeNode parent = queue.poll();
+            Integer leftNum = nums[i++];
+
+            if (leftNum != null) {
+                TreeNode left = new TreeNode(leftNum);
+                parent.left = left;
+                queue.add(left);
+            }
+
+            if (i < nums.length) {
+                Integer rightNum = nums[i++];
+                if (rightNum != null) {
+                    TreeNode right = new TreeNode(rightNum);
+                    parent.right = right;
+                    queue.add(right);
+                }
+            }
+        }
         return root;
-    }
-
-    private void form(TreeNode root, int rootIndex, Integer[] data) {
-        int n = data.length;
-
-        int leftIndex = 2 * rootIndex + 1;
-        if (leftIndex < n && null != data[leftIndex]) {
-            root.left = new TreeNode(data[leftIndex]);
-            form(root.left, leftIndex, data);
-        }
-
-        int rightIndex = 2 * rootIndex + 2;
-        if (rightIndex < n && null != data[rightIndex]) {
-            root.right = new TreeNode(data[rightIndex]);
-            form(root.right, rightIndex, data);
-        }
     }
 }
