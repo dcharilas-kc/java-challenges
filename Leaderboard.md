@@ -9,5 +9,5 @@ When submitting your solution there, you'll notice that Runtime duration and Mem
 | Stone Game                  | M. Schnitzius | 15           | 48.2        |
 | Fun with Strings - Part 1a  |               |              |             |
 | Fun with Strings - Part 1b  |               |              |             |
-| Buy and Sell Stock - Part 1 |               |              |             |
+| Buy and Sell Stock - Part 1 | M. Schnitzius | 4            | 83.5        |
 | Buy and Sell Stock - Part 2 |               |              |             |
