@@ -4,45 +4,26 @@ public class Camera {
 
     public int minCameraCover(TreeNode root) {
 
-        return minCamerasNeeded(root, false, false);
+        return minCamerasNeeded(root).minCameras;
     }
 
-    private int minCamerasNeeded(TreeNode node, boolean mustHaveCamera, boolean parentHasCamera) {
+    private Result minCamerasNeeded(TreeNode node) {
 
-        // It's easiest to just allow traversal to the null children, and return that they require 0 cameras.
         if (node == null) {
-            return 0;
+            return new Result(false, 0);
         }
 
-        // Try putting a camera at this node, even if it's not required.
-        int minCameras = 1 + minCamerasNeeded(node.left, false, true) +
-                             minCamerasNeeded(node.right, false, true);
-
-        // If the camera isn't required for this node, we have other cases to try.
-        if (!mustHaveCamera) {
-
-            if (parentHasCamera) {
-                // The parent of this node has a camera, so we don't require either of the children to
-                // have one.
-                minCameras = Math.min(minCameras,
-                        minCamerasNeeded(node.left, false, false) +
-                        minCamerasNeeded(node.right, false, false));
-            } else {
-                // The parent of this node doesn't have a camera, so either the left child or the right
-                // child must have a camera, to ensure the current node is covered.
-                if (node.left != null) {
-                    minCameras = Math.min(minCameras,
-                            minCamerasNeeded(node.left, true, false) +
-                            minCamerasNeeded(node.right, false, false));
-                }
-                if (node.right != null) {
-                    minCameras = Math.min(minCameras,
-                            minCamerasNeeded(node.left, false, false) +
-                            minCamerasNeeded(node.right, true, false));
-                }
-            }
+        if (node.left == null && node.right == null) {
+            return new Result(false, 0);
         }
 
-        return minCameras;
+        Result leftResult = minCamerasNeeded(node.left);
+        Result rightResult = minCamerasNeeded(node.right);
+
+        boolean needsCamera = !leftResult.nodeHasCamera && !rightResult.nodeHasCamera;
+        return new Result(needsCamera, leftResult.minCameras + rightResult.minCameras + (needsCamera ? 1 : 0));
+    }
+
+    private record Result(boolean nodeHasCamera, int minCameras) {
     }
 }
