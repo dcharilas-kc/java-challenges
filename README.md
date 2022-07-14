@@ -39,3 +39,4 @@ others with focus on specific Java aspects.
 | Binary Tree Camera          | Algorithm          |
 | Puzzlers - Part 3           | Spot the error     | 
 | Stream Practice - Part 1    | Java Streams       | 
+| Stream Practice - Part 2    | Java Streams       | 
