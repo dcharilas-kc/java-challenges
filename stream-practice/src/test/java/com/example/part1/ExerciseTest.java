@@ -38,6 +38,12 @@ public class ExerciseTest {
     }
 
     @Test
+    public void test_sum_with_negatives() {
+        IntStream intStream = IntStream.of(-1, 2, 3, -4);
+        assertEquals(5, exercise.sum(intStream));
+    }
+
+    @Test
     public void test_filter() {
         IntStream intStream = IntStream.of(1, -2, 3, -50, 20, -10);
         assertTrue(intStreamContainsAnother(IntStream.of(1, 3, 20), exercise.filter(intStream)));
