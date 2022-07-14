@@ -38,3 +38,4 @@ others with focus on specific Java aspects.
 | Buy and Sell Stock - Part 2 | Algorithm          |
 | Binary Tree Camera          | Algorithm          |
 | Puzzlers - Part 3           | Spot the error     | 
+| Stream Practice - Part 1    | Java Streams       | 
