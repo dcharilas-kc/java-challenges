@@ -11,3 +11,4 @@ When submitting your solution there, you'll notice that Runtime duration and Mem
 | Fun with Strings - Part 1b  |               |              |             |
 | Buy and Sell Stock - Part 1 | M. Schnitzius | 4            | 83.5        |
 | Buy and Sell Stock - Part 2 |               |              |             |
+| Binary Tree Cameras         | M. Schnitzius | 1            | 41.8        |
