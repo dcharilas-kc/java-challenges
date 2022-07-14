@@ -40,7 +40,7 @@ public class ExerciseTest {
     @Test
     public void test_filter() {
         IntStream intStream = IntStream.of(1, -2, 3, -50, 20, -10);
-        assertTrue(intStreamContainsAnother(IntStream.of(1, 3, 20), exercise.increment(intStream)));
+        assertTrue(intStreamContainsAnother(IntStream.of(1, 3, 20), exercise.filter(intStream)));
     }
 
     @Test
